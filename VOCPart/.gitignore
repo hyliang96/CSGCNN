@@ -1,0 +1,11 @@
+/__*__
+CSG.pt
+STD.pt
+__pycache__
+/paper
+*.npy
+*.png
+/preprocessed_VOC_Part/
+/result-dir
+# /working.md
+# /results

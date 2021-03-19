@@ -74,7 +74,7 @@ print('filter: top_rate =', threshold_probability, ', UoI_threshold =', UoI_thre
 dataset = VOCPart(VOC_path, train=False, requires=['img'], size=128)
 dataloader = torch.utils.data.DataLoader(dataset,
                 batch_size=32, pin_memory=True,
-                shuffle=True, num_workers=16)
+                shuffle=False, num_workers=16)
 img_num = len(dataset)
 
 
@@ -101,7 +101,7 @@ for method in ['CSG', 'STD']:
 dataset = VOCPart(VOC_path , train=False, requires=['img','obj_mask', 'part_mask'], size=128)
 dataloader = torch.utils.data.DataLoader(dataset,
                 batch_size=32, pin_memory=True,
-                shuffle=True, num_workers=16)
+                shuffle=False, num_workers=16)
 img_num = len(dataset)
 
 # %%
@@ -301,3 +301,5 @@ for method in ['CSG', 'STD']:
     (related_filter_num[method]*related_filter_mean_score[method]).sum() / related_filter_num[method].sum() ) )
 
 print('RFN: related filter number')
+
+# %%

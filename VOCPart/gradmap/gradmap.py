@@ -76,11 +76,11 @@ dataset = VOCPart(VOC_path , train=False, requires=['img','obj_mask'], size=128)
 
 dataloader = torch.utils.data.DataLoader(dataset,
                 batch_size=64, pin_memory=True,
-                shuffle=True, num_workers=16)
+                shuffle=False, num_workers=16)
 
 dataloader_monoimage = torch.utils.data.DataLoader(dataset,
                 batch_size=1, pin_memory=True,
-                shuffle=True, num_workers=1)
+                shuffle=False, num_workers=1)
 # %%
 
 

@@ -1,6 +1,5 @@
 # %%
-gpuid = "0"
-
+gpuid = 0
 
 if_balance_sample = False
 if_normalize = False
@@ -24,7 +23,7 @@ import matplotlib
 from numpy.linalg import norm
 
 
-os.environ["CUDA_VISIBLE_DEVICES"] = gpuid
+os.environ["CUDA_VISIBLE_DEVICES"] = str(gpuid)
 device_str = "cuda:0"
 device = torch.device(device_str)
 
@@ -68,7 +67,7 @@ dataset = VOCPart(VOC_path , train=False, requires=['img'], size=128)
 
 dataloader = torch.utils.data.DataLoader(dataset,
                 batch_size=64, pin_memory=True,
-                shuffle=True, num_workers=16)
+                shuffle=False, num_workers=16)
 
 # %%
 
@@ -108,9 +107,9 @@ for method in ['CSG', 'STD']:
                 np.ones(n_sample, dtype=bool),
                 np.zeros(n_sample, dtype=bool)
             ], axis=0)
-            mu_info = mutual_info_classif(sampled_features, sampled_labels)
+            mu_info = mutual_info_classif(sampled_features, sampled_labels, random_state=0)
         else:
-            mu_info = mutual_info_classif(features, y)
+            mu_info = mutual_info_classif(features, y, random_state=0)
 
         # print('mu_info.shape =',mu_info.shape) # [K]
         mu_info = np.reshape(mu_info, (1, features.shape[1]))
@@ -148,7 +147,7 @@ for method in ['CSG', 'STD']:
     plt.show()
 
     metric = np.mean(np.max(X, axis=0))
-    print(method, 'MIS = %.4f' % metric, metric)
+    print(method, 'MIS = %.4f' % metric)
 
 
 # %%
