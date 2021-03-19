@@ -6,21 +6,27 @@ The dir structure is
 
 ```
 ./
+    requirements.txt  python environment requirements
+    starting.sh       download dataset, checkpoints, and set __result__/ link.
+
     train/       training models
-    VOC/         dataset preprocess
-    IoU/         calculate IoU of cam/filter activation map
-        IoU.py
-    __data__/    soft link, dataset dir
-    __result__/  soft link, saving experiment logs, checkpoints
+    VOC/         dataset preprocess and loading
+    gradmap/     evaluating with gradient map
+    activamap/   evaluating with cam/filter activation map
+    mutualinfo/  evaluating with mutual information score
+
+    checkpoints/ checkpoints in our paper
+        CSG.pt   training with our CSG method
+        STD.pt   training with standard method
+    __data__/    -- soft link --> dataset dir
+    __result__/  -- soft link --> result dir, saving experiment logs, checkpoints
         VOCPart_128x128_pretrained/
             <experiment-id>/
                 <seed>/
                     checkpoints/
                     events.out.tfevents.xxx
                     log
-    checkpoints/
-        CSG.pt   our model
-        STD.pt   standard model
+
 ```
 
 ## Device
@@ -105,13 +111,6 @@ If you want to preprocess Pascal VOC 2010 dataset and get VOC Part by yourself, 
 ## Training
 
 To *approximately* reproduce the training process in our paper, please run the code below
-
-* Set `__result__` soft link:
-
-    ```bash
-    mkdir <path-to-result-dir>
-    ln -s <path-to-result-dir> ./__result__
-    ```
 
 * Set the "training settings" in  `train/run.py` as following, which is the default setting.
 
