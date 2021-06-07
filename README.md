@@ -2,7 +2,9 @@
 
 ## Paper
 
-[Haoyu Liang, etc. Training Interpretable Convolutional Neural Networks by Differentiating Class-specific Filters. ECCV 2020](https://arxiv.org/abs/2007.08194)
+Paper with supplementary: [Haoyu Liang, etc. Training Interpretable Convolutional Neural Networks by Differentiating Class-specific Filters. ECCV 2020](https://arxiv.org/abs/2007.08194)
+
+The [slide](https://cloud.tsinghua.edu.cn/f/fa7b28ef8a344ca68ca0/?dl=1) and [video](https://cloud.tsinghua.edu.cn/f/939fb5e944f34aa8bb95/?dl=1) for ECCV 2020 oral.
 
 cite as
 
@@ -16,6 +18,7 @@ cite as
   organization={Springer}
 }
 ```
+
 
 ## Experiments
 
