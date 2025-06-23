@@ -4,7 +4,7 @@
 
 Paper with supplementary: [Haoyu Liang, etc. Training Interpretable Convolutional Neural Networks by Differentiating Class-specific Filters. ECCV 2020](https://arxiv.org/abs/2007.08194)
 
-The [slide](https://drive.google.com/file/d/1GNL08EtvaILxbrwVHFkQ7TRyHcbM-e4E/view?usp=drive_link) and [video](https://drive.google.com/file/d/14lEtrwgdOv3c812qb37m0TYRs3Qpgxqg/view?usp=drive_link) for ECCV 2020 oral.
+The [video](https://drive.google.com/file/d/1GNL08EtvaILxbrwVHFkQ7TRyHcbM-e4E/view?usp=drive_link) and [slide](https://drive.google.com/file/d/14lEtrwgdOv3c812qb37m0TYRs3Qpgxqg/view?usp=drive_link) for ECCV 2020 oral.
 
 cite as
 
