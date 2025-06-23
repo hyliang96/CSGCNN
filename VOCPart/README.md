@@ -47,9 +47,9 @@ GPU Memory requirement: >=5000MB
 
     * download [CSG.pt](https://drive.google.com/file/d/1nAAhePSoF0enexKKskzc0QEUObhwbUNx/view?usp=drive_link) to `checkpoints/CSG.pt`
   
-    * download [CSG.pt](https://drive.google.com/file/d/1013ySsHjF8wxLZEfWeTeDENaa5NH8Ln3/view?usp=drive_link) to `checkpoints/STD.pt`
+    * download [STD.pt](https://drive.google.com/file/d/1013ySsHjF8wxLZEfWeTeDENaa5NH8Ln3/view?usp=drive_link) to `checkpoints/STD.pt`
 
-    * download [CSG.pt](https://drive.google.com/file/d/16r6kGn0W2kOoxkZgKNvsuBz0oh81h8Iy/view?usp=drive_link) to `preprocessed_VOC_Part.zip`
+    * download [preprocessed_VOC_Part.zip](https://drive.google.com/file/d/16r6kGn0W2kOoxkZgKNvsuBz0oh81h8Iy/view?usp=drive_link) to `preprocessed_VOC_Part.zip`
 
     then run
 
