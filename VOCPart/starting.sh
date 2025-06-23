@@ -6,13 +6,14 @@ VOCPart_repo_root=$(cd "$(dirname "${BASH_SOURCE[0]-$0}")"; pwd)
 # To get the checkpoints reported in our paper,
 # download `{STD,CSG}.pt` from [Tsinghua Cloud](https://cloud.tsinghua.edu.cn/d/9e9943b6d87c4997b1e8/),
 # and put them to  `./checkpoints/{STD,CSG}.pt`.
-cd ${VOCPart_repo_root}/checkpoints
-wget -c -t 0 https://cloud.tsinghua.edu.cn/f/49c44f295e394d17bb80/?dl=1 -O CSG.pt
-wget -c -t 0 https://cloud.tsinghua.edu.cn/f/a1360d274a0942fdae77/?dl=1 -O STD.pt
+# cd ${VOCPart_repo_root}/checkpoints
 
-# download preprocessed dataset
-cd ${VOCPart_repo_root}
-wget -c -t 0 https://cloud.tsinghua.edu.cn/f/8031d67f50f24e2aaaac/?dl=1 -O preprocessed_VOC_Part.zip
+# wget -c -t 0 https://drive.google.com/file/d/1nAAhePSoF0enexKKskzc0QEUObhwbUNx/view?usp=drive_link -O CSG.pt
+# wget -c -t 0 https://drive.google.com/file/d/1013ySsHjF8wxLZEfWeTeDENaa5NH8Ln3/view?usp=drive_link -O STD.pt
+
+# # download preprocessed dataset
+# cd ${VOCPart_repo_root}
+# wget -c -t 0 https://drive.google.com/file/d/16r6kGn0W2kOoxkZgKNvsuBz0oh81h8Iy/view?usp=drive_link -O preprocessed_VOC_Part.zip
 unzip preprocessed_VOC_Part.zip
 rm preprocessed_VOC_Part.zip
 ln -s preprocessed_VOC_Part __data__
